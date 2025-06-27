@@ -4,30 +4,30 @@
 <form #regForm="ngForm" (ngSubmit)="onSubmit()">
     <div>
         <label>Titolo:</label>
-        <input name="titolo" [(ngModel)]="l.titolo" required />
+        <input name="titolo" [(ngModel)]="libro.titolo" required />
     </div>
     <div>
         <label>Autore:</label>
-        <input name="autore" [(ngModel)]="l.autore" required />
+        <input name="autore" [(ngModel)]="libro.autore" required />
     </div>
     <div>
         <label>Genere:</label>
-        <input name="genere" [(ngModel)]="l.genere" required />
+        <input name="genere" [(ngModel)]="libro.genere" required />
     </div>
     <div>
         <label>Trama:</label>
-        <input name="trama" [(ngModel)]="l.trama" required />
+        <input name="trama" [(ngModel)]="libro.trama" required />
     </div>
     <button type="submit" [disabled]="regForm.invalid">Conferma</button>
 </form>
 
-<!--<p *ngIf="submitted">
+<div *ngIf="submitted">
     <h2>Libro aggiunto</h2> 
-    Titolo: {{l.titolo}}
+    Titolo: {{libro.titolo}}
     <br>
-    Autore: {{l.autore}}
+    Autore: {{libro.autore}}
     <br>
-    Genere: {{l.genere}}
+    Genere: {{libro.genere}}
     <br>
-    Trama: {{l.trama}} 
-</p>-->
+    Trama: {{libro.trama}} 
+</div>
