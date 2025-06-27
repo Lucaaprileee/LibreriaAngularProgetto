@@ -1,0 +1,33 @@
+<h1>FORM PER AGGIUNGERE UN NUOVO LIBRO</h1>
+<h2>Compila i seguenti campi:</h2>
+
+<form #regForm="ngForm" (ngSubmit)="onSubmit()">
+    <div>
+        <label>Titolo:</label>
+        <input name="titolo" [(ngModel)]="l.titolo" required />
+    </div>
+    <div>
+        <label>Autore:</label>
+        <input name="autore" [(ngModel)]="l.autore" required />
+    </div>
+    <div>
+        <label>Genere:</label>
+        <input name="genere" [(ngModel)]="l.genere" required />
+    </div>
+    <div>
+        <label>Trama:</label>
+        <input name="trama" [(ngModel)]="l.trama" required />
+    </div>
+    <button type="submit" [disabled]="regForm.invalid">Conferma</button>
+</form>
+
+<!--<p *ngIf="submitted">
+    <h2>Libro aggiunto</h2> 
+    Titolo: {{l.titolo}}
+    <br>
+    Autore: {{l.autore}}
+    <br>
+    Genere: {{l.genere}}
+    <br>
+    Trama: {{l.trama}} 
+</p>-->
