@@ -1,16 +1,21 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router';
 import { AggiungiLibroComponent } from './aggiungi-libro-component/aggiungi-libro-component';
 import { RimuoviLibroComponent } from './rimuovi-libro-component/rimuovi-libro-component';
 
+
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,
+  standalone: true,
+  imports: [RouterOutlet, 
+            RouterModule,
             AggiungiLibroComponent,
-            RimuoviLibroComponent],
+            RimuoviLibroComponent
+  ],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrls: ['./app.css']
 })
 export class App {
+
   protected title = 'LibreriaAngular';
 }

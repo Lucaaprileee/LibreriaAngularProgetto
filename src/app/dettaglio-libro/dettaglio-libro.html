@@ -1,1 +1,10 @@
-<p>dettaglio-libro works!</p>
+<div *ngIf="libro">
+  <h2>{{ libro.titolo }}</h2>
+  <p><strong>Autore:</strong> {{ libro.autore }}</p>
+  <p><strong>Genere:</strong> {{ libro.genere }}</p>
+  <p><strong>Trama:</strong> {{ libro.trama }}</p>
+</div>
+
+<div *ngIf="!libro">
+  <p>Libro non trovato.</p>
+</div>
